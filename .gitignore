@@ -1,0 +1,11 @@
+# Jangan upload file audio MP3 ke GitHub
+*.mp3
+*.MP3
+*.wav
+*.WAV
+Outliners_Theme_SOng_V1.mp3
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+

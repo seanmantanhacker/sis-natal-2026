@@ -760,6 +760,18 @@ body {
   display: inline-block;
 }
 
+.shot-location-badge {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  padding: 0.3rem 0.55rem;
+  border-radius: 6px;
+  line-height: 1.35;
+  display: block;
+}
+
 .shot-play-btn {
   margin-top: 0.25rem;
   font-size: 0.76rem;
@@ -798,6 +810,16 @@ body {
   padding: 0.25rem 0.6rem;
   border-radius: 6px;
   color: var(--text-secondary);
+}
+
+.tech-tag.tech-location-tag {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.35);
+  color: #a7f3d0;
+}
+
+.tech-tag.tech-location-tag strong {
+  color: #34d399;
 }
 
 .tech-tag strong {

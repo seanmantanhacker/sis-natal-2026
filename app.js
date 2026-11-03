@@ -17,6 +17,7 @@ const SHOTS_DATA = [
     duration: 8,
     timeLabel: "00:00 – 00:08",
     title: "Kedatangan di Bandara Incheon & Foto Kabar Keluarga",
+    location: "Bandara Internasional Incheon (Terminal 1 / 2 — Gate Kedatangan Internasional)",
     camera: "Medium Shot (MS) -> Close-Up (CU) HP",
     lensAndMove: "35mm f/2.0 • Gimbal Tracking Mundur mengikuti langkah Helen",
     visualIcon: "✈️🇰🇷",
@@ -39,6 +40,7 @@ const SHOTS_DATA = [
     duration: 6,
     timeLabel: "00:08 – 00:14",
     title: "Montase Cepat Pengalaman Menyenangkan di Korea",
+    location: "Area Publik Seoul: Trotoar Hongdae, Kafe Estetik, & Gerai Street Food Myeongdong",
     camera: "Fast-Cut Montase (4 Klip @ 1.5 dtk) • Whip Pan & Match Cut",
     lensAndMove: "24mm & 50mm f/1.8 • Handheld Dinamis & Enerjik",
     visualIcon: "☕🍜✨",
@@ -61,6 +63,7 @@ const SHOTS_DATA = [
     duration: 6,
     timeLabel: "00:14 – 00:20",
     title: "Menulis Impian di Kamar Baru: 'MY KOREA GOALS'",
+    location: "Kamar Baru Helen (Kamar One-Room / Gosiwon Mahasiswa Baru di Korea)",
     camera: "Over-the-Shoulder (OTS) -> Insert Close-Up Buku Catatan",
     lensAndMove: "50mm Macro f/2.8 • Tilt Down lembut ke tulisan tangan",
     visualIcon: "📖✍️",
@@ -87,6 +90,7 @@ const SHOTS_DATA = [
     duration: 9,
     timeLabel: "00:20 – 00:29",
     title: "Montage Kuliah: Dinding Bahasa & Begadang Tugas 02:15",
+    location: "Ruang Kelas Universitas Korea & Meja Belajar Kamar Helen (Tengah Malam)",
     camera: "Medium Shot Kelas -> Insert Jam Digital & CU Wajah Letih",
     lensAndMove: "50mm f/1.8 • Static Tripod (Tegang dan Membeku)",
     visualIcon: "📚⏱️",
@@ -109,6 +113,7 @@ const SHOTS_DATA = [
     duration: 9,
     timeLabel: "00:29 – 00:38",
     title: "Montage Part-Time: Tekanan Kerja & '헬렌 씨, 빨리!'",
+    location: "Restoran / Kafe Korea Tempat Kerja Part-Time (Area Meja Tamu & Trotoar Luar Toko)",
     camera: "Handheld Medium Shot di Tempat Kerja Part-Time",
     lensAndMove: "35mm f/2.0 • Gerakan kamera cepat mengikuti ritme kerja",
     visualIcon: "🛎️🏃‍♀️",
@@ -131,6 +136,7 @@ const SHOTS_DATA = [
     duration: 8,
     timeLabel: "00:38 – 00:46",
     title: "Montage Keuangan: Cek Rekening & Pembatalan Pembelian",
+    location: "Kamar One-Room Helen (Area Meja Belajar & Kasur Sempit)",
     camera: "Extreme Close-Up (ECU) Layar HP -> MCU Helen Termenung",
     lensAndMove: "50mm Macro f/2.8 • Slow Rack Focus ke wajah Helen",
     visualIcon: "💳📉",
@@ -153,6 +159,7 @@ const SHOTS_DATA = [
     duration: 9,
     timeLabel: "00:46 – 00:55",
     title: "Montage Masa Depan: Email Penolakan 'Thank You For Your Interest'",
+    location: "Kamar One-Room Helen (Meja Belajar / Depan Layar Laptop)",
     camera: "OTS Layar Laptop -> Close-Up Mata Helen",
     lensAndMove: "50mm f/1.8 • Static Hold fokus pada baris teks email",
     visualIcon: "📧❌",
@@ -175,6 +182,7 @@ const SHOTS_DATA = [
     duration: 12,
     timeLabel: "00:55 – 01:07",
     title: "Montage Pertemanan Gereja: Miskomunikasi & Chat Dihapus",
+    location: "Gedung Gereja (Hall Persiapan / Panggung) & Kamar One-Room Helen (Malam)",
     camera: "Medium Shot Ruang Gereja -> ECU Layar Chat KakaoTalk",
     lensAndMove: "35mm & 50mm f/1.8 • Cut to Insert HP di malam hari",
     visualIcon: "⛪💬⌫",
@@ -197,6 +205,7 @@ const SHOTS_DATA = [
     duration: 8,
     timeLabel: "01:07 – 01:15",
     title: "Montage Kesepian: Video Call Keluarga & Senyum Topeng",
+    location: "Kamar One-Room Helen (Sudut Kasur / Kamar Redup)",
     camera: "Close-Up Wajah Helen menatap layar Video Call HP",
     lensAndMove: "50mm f/1.4 • Slow Push-In tipis ke tatapan mata",
     visualIcon: "📱🏡",
@@ -223,6 +232,7 @@ const SHOTS_DATA = [
     duration: 10,
     timeLabel: "01:15 – 01:25",
     title: "Jalan Pulang Malam Hari & Kilasan Flashback Kafe",
+    location: "Trotoar Jalanan Malam Kota Korea & Luar Kafe Berpintu Kaca Hangat",
     camera: "Tracking Shot Helen di Trotoar -> Flashback CU (2 dtk) -> Kembali ke Realita",
     lensAndMove: "35mm f/1.8 • Handheld Halus -> Match Cut Flashback Warm -> Cold Winter",
     visualIcon: "🚶‍♀️❄️💭",
@@ -245,6 +255,7 @@ const SHOTS_DATA = [
     duration: 20,
     timeLabel: "01:25 – 01:45",
     title: "Notebook 'What's Next?' & Pertanyaan: 'Tuhan, Buat Apa Aku di Sini?'",
+    location: "Kamar One-Room Helen (Meja Belajar dengan Lampu Meja Temaram)",
     camera: "MCU Helen di Meja Belajar -> Insert Buku Catatan -> CU Wajah",
     lensAndMove: "50mm f/1.4 • Slow Push-In Sangat Halus ke Mata Helen",
     visualIcon: "📖❓🥺",
@@ -271,6 +282,7 @@ const SHOTS_DATA = [
     duration: 10,
     timeLabel: "01:45 – 01:55",
     title: "Pesan Grup Pelayanan Natal & Langkah Menuju Gereja",
+    location: "Kamar One-Room Helen (Pintu Keluar) & Trotoar Jalan Menuju Gereja",
     camera: "Insert Layar HP -> Helen Bersiap Berangkat",
     lensAndMove: "50mm Macro f/2.0 • Cut to Medium Tracking Shot Helen melangkah",
     visualIcon: "📲🎄⛪",
@@ -293,6 +305,7 @@ const SHOTS_DATA = [
     duration: 20,
     timeLabel: "01:55 – 02:15",
     title: "Gotong Royong Dekorasi & Rekonsiliasi Tulus Sesama Pelayan",
+    location: "Ruang Ibadah Gereja (Area Dekorasi Pohon Natal & Panggung)",
     camera: "Medium Group Shot -> Two-Shot Intim Helen & Teman Gereja",
     lensAndMove: "35mm & 50mm f/1.8 • Handheld Halus dan Hangat",
     visualIcon: "🤝✨🎀",
@@ -319,6 +332,7 @@ const SHOTS_DATA = [
     duration: 20,
     timeLabel: "02:15 – 02:35",
     title: "Menyambut Jemaat Baru yang Sendirian di Hari Natal",
+    location: "Gedung Gereja (Area Foyer Penyambutan & Barisan Kursi Paling Belakang)",
     camera: "Medium Shot Menyambut -> Two-Shot Hangat",
     lensAndMove: "35mm f/1.8 • Panning Halus mengikuti langkah Helen",
     visualIcon: "👋🫂🎄",
@@ -341,6 +355,7 @@ const SHOTS_DATA = [
     duration: 20,
     timeLabel: "02:35 – 02:55",
     title: "Pembacaan Lukas 2:1–7 & Visualisasi Palungan Betlehem",
+    location: "Ruang Ibadah Gereja (Bangku Jemaat) & Set Palungan Betlehem (Studio / Reka Simbolis)",
     camera: "CU Helen Mendengar Firman -> Cinematic Reenactment Maria & Yusuf -> CU Palungan",
     lensAndMove: "50mm f/1.4 -> 24mm Cinematic Wide -> Macro Palungan",
     visualIcon: "📖✨👶",
@@ -363,6 +378,7 @@ const SHOTS_DATA = [
     duration: 25,
     timeLabel: "02:55 – 03:20",
     title: "VO Refleksi Helen, Flashback Pembentukan & Doa Penyerahan Diri",
+    location: "Ruang Ibadah Gereja (Bangku Jemaat di Tengah Ibadah & Pendar Lilin Natal)",
     camera: "Macro Palungan -> CU Helen Menatap Khusyuk -> Fast Flashback -> MCU Helen Berdoa",
     lensAndMove: "50mm f/1.4 • Slow Zoom In ke Mata Helen yang Berkaca-kaca Haru",
     visualIcon: "🕯️🙏🥺",
@@ -389,6 +405,7 @@ const SHOTS_DATA = [
     duration: 20,
     timeLabel: "03:20 – 03:40",
     title: "Rutinitas yang Sama: Berdoa Sebelum Melangkah & Menyapa Sesama",
+    location: "Kamar One-Room Helen (Depan Pintu) & Trotoar Pagi Kota Korea (Depan Toko)",
     camera: "Medium Shot Pintu Kamar -> Tracking Shot Trotoar Korea",
     lensAndMove: "35mm f/2.0 • Gimbal Smooth Mengikuti Langkah Helen yang Mantap",
     visualIcon: "🚪🚶‍♀️☀️",
@@ -416,6 +433,7 @@ const SHOTS_DATA = [
     duration: 25,
     timeLabel: "03:40 – 04:05",
     title: "Footage Nyata Jemaat di Korea & Pertanyaan: 'Untuk Apa Aku di Sini?'",
+    location: "Lokasi Nyata Aktivitas Jemaat: Laboratorium Kampus Korea, Pabrik Industri, & Apartemen",
     camera: "Dokumenter Asli Multi-Angle (Footage Nyata Jemaat/Diaspora Indonesia di Korea)",
     lensAndMove: "35mm / 50mm Natural Documentary Style • Video Asli Keseharian Jemaat",
     visualIcon: "🏭🔬👨‍👩‍👧‍👦",
@@ -438,6 +456,7 @@ const SHOTS_DATA = [
     duration: 25,
     timeLabel: "04:05 – 04:30",
     title: "Klimaks: Menjalani Penempatan Tuhan dengan Setia & Kebersamaan Gereja",
+    location: "Lingkungan Kerja Jemaat & Hall Gereja (Meja Makan Persekutuan / Fellowship)",
     camera: "Dokumenter Jemaat Tersenyum -> Montase Pelayanan & Persekutuan Gereja",
     lensAndMove: "Dynamic Cut • Gerakan kamera merangkum pelukan, senyum, dan pelayanan bersama",
     visualIcon: "🙌🍲❤️",
@@ -464,6 +483,7 @@ const SHOTS_DATA = [
     duration: 10,
     timeLabel: "04:30 – 04:40",
     title: "Title Card Utama: Ayat Kunci, Tema & Selamat Natal",
+    location: "Post-Production / Studio Grafis (On-Screen Digital Typography Card)",
     camera: "On-Screen Typography di atas Layar Hitam Pekat",
     lensAndMove: "Slow Text Fade-In Emas & Putih Elegan -> Final Fade Out",
     visualIcon: "✨📜🎄",
@@ -512,6 +532,7 @@ function updateSimulatorUI(sec) {
   const hudShotCode = document.getElementById("hudShotCode");
   const hudActName = document.getElementById("hudActName");
   const hudCamera = document.getElementById("hudCamera");
+  const hudLocation = document.getElementById("hudLocation");
   const hudSfx = document.getElementById("hudSfx");
   const stageIcon = document.getElementById("stageIcon");
   const stageTitle = document.getElementById("stageTitle");
@@ -524,6 +545,7 @@ function updateSimulatorUI(sec) {
   if (hudShotCode) hudShotCode.textContent = `${shot.code} (${shot.timeLabel})`;
   if (hudActName) hudActName.textContent = shot.sceneName;
   if (hudCamera) hudCamera.textContent = `🎥 ${shot.camera}`;
+  if (hudLocation) hudLocation.textContent = `📍 ${shot.location}`;
   if (hudSfx) hudSfx.textContent = `🔊 ${shot.sfx.slice(0, 60)}...`;
   if (stageIcon) stageIcon.textContent = shot.visualIcon;
   if (stageTitle) stageTitle.textContent = `${shot.code}: ${shot.title}`;
@@ -623,6 +645,7 @@ function renderShotsList() {
       shot.vo.toLowerCase().includes(q) ||
       shot.camera.toLowerCase().includes(q) ||
       shot.code.toLowerCase().includes(q) ||
+      (shot.location && shot.location.toLowerCase().includes(q)) ||
       (shot.dialogue && shot.dialogue.toLowerCase().includes(q)) ||
       (shot.propsWardrobe && shot.propsWardrobe.toLowerCase().includes(q));
     return matchesScene && matchesSearch;
@@ -660,7 +683,7 @@ function renderShotsList() {
 
       return `
         <article class="shot-card ${isPlayingNow ? "playing-now" : ""} ${isDone ? "shot-done" : ""}" data-shot-id="${shot.id}">
-          <!-- Kolom 1: Detik & Kamera -->
+          <!-- Kolom 1: Detik, Kamera & Lokasi Syuting -->
           <div class="shot-time-col">
             <div class="shot-num-row">
               <span class="shot-number">${shot.code}</span>
@@ -668,6 +691,7 @@ function renderShotsList() {
             </div>
             <div class="shot-timestamp">${shot.timeLabel}</div>
             <div class="shot-camera-type">🎥 ${shot.camera}</div>
+            <div class="shot-location-badge">📍 ${shot.location}</div>
             <button type="button" class="btn shot-play-btn" onclick="jumpToSecond(${shot.startSec}, true)">
               ▶ Monitor (${formatTime(shot.startSec)})
             </button>
@@ -677,7 +701,7 @@ function renderShotsList() {
             </label>
           </div>
 
-          <!-- Kolom 2: Aksi Visual, Blocking, Lighting, Props & Wardrobe -->
+          <!-- Kolom 2: Aksi Visual, Blocking, Lighting, Lokasi, Props & Wardrobe -->
           <div class="shot-visual-col">
             <h4>
               <span>${shot.visualIcon} ${shot.title}</span>
@@ -688,6 +712,7 @@ function renderShotsList() {
             <p class="shot-action-text">${shot.action}</p>
 
             <div class="shot-tech-tags">
+              <span class="tech-tag tech-location-tag"><strong>📍 Lokasi Syuting:</strong> ${shot.location}</span>
               <span class="tech-tag"><strong>Lensa & Gerakan:</strong> ${shot.lensAndMove}</span>
               <span class="tech-tag"><strong>Lighting:</strong> ${shot.lighting}</span>
               <span class="tech-tag" style="border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.06);">

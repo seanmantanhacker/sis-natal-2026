@@ -499,116 +499,9 @@ const SHOTS_DATA = [
 ];
 
 // State Management
-let currentSecond = 0;
-let isPlaying = false;
-let playbackSpeed = 1;
-let timerInterval = null;
 let activeSceneFilter = "all";
 let searchQuery = "";
 let completedShots = JSON.parse(localStorage.getItem("unchosen_completed_shots_v2") || "[]");
-
-const TOTAL_DURATION_SEC = 280; // 04:40
-
-// Format seconds to MM:SS
-function formatTime(sec) {
-  const s = Math.max(0, Math.min(TOTAL_DURATION_SEC, Math.floor(sec)));
-  const mins = String(Math.floor(s / 60)).padStart(2, "0");
-  const secs = String(s % 60).padStart(2, "0");
-  return `${mins}:${secs}`;
-}
-
-// Find active shot for a given second
-function getShotAtSecond(sec) {
-  return (
-    SHOTS_DATA.find((shot) => sec >= shot.startSec && sec < shot.endSec) ||
-    SHOTS_DATA[SHOTS_DATA.length - 1]
-  );
-}
-
-// Update the Interactive Cinema Simulator
-function updateSimulatorUI(sec) {
-  const shot = getShotAtSecond(sec);
-  const screen = document.getElementById("cinemaScreen");
-  const hudShotCode = document.getElementById("hudShotCode");
-  const hudActName = document.getElementById("hudActName");
-  const hudCamera = document.getElementById("hudCamera");
-  const hudLocation = document.getElementById("hudLocation");
-  const hudSfx = document.getElementById("hudSfx");
-  const stageIcon = document.getElementById("stageIcon");
-  const stageTitle = document.getElementById("stageTitle");
-  const stageAction = document.getElementById("stageAction");
-  const stageVo = document.getElementById("stageVo");
-  const timecodeDisplay = document.getElementById("timecodeDisplay");
-  const timelineSlider = document.getElementById("timelineSlider");
-
-  if (screen) screen.style.background = shot.bgGradient;
-  if (hudShotCode) hudShotCode.textContent = `${shot.code} (${shot.timeLabel})`;
-  if (hudActName) hudActName.textContent = shot.sceneName;
-  if (hudCamera) hudCamera.textContent = `🎥 ${shot.camera}`;
-  if (hudLocation) hudLocation.textContent = `📍 ${shot.location}`;
-  if (hudSfx) hudSfx.textContent = `🔊 ${shot.sfx.slice(0, 60)}...`;
-  if (stageIcon) stageIcon.textContent = shot.visualIcon;
-  if (stageTitle) stageTitle.textContent = `${shot.code}: ${shot.title}`;
-  if (stageAction) stageAction.textContent = shot.action;
-  if (stageVo) {
-    if (shot.vo.startsWith("[Tanpa VO")) {
-      stageVo.textContent = `🎙️ ${shot.vo}`;
-      stageVo.style.color = "var(--text-muted)";
-      stageVo.style.borderColor = "var(--text-muted)";
-    } else {
-      stageVo.textContent = `🎙️ VO: "${shot.vo}"`;
-      stageVo.style.color = "#fef08a";
-      stageVo.style.borderColor = "var(--gold)";
-    }
-  }
-  if (timecodeDisplay) timecodeDisplay.textContent = `${formatTime(sec)} / 04:40`;
-  if (timelineSlider && Number(timelineSlider.value) !== Math.floor(sec)) {
-    timelineSlider.value = Math.floor(sec);
-  }
-
-  // Highlight active card in the shot list
-  document.querySelectorAll(".shot-card").forEach((card) => {
-    const id = Number(card.dataset.shotId);
-    if (id === shot.id) {
-      card.classList.add("playing-now");
-    } else {
-      card.classList.remove("playing-now");
-    }
-  });
-}
-
-// Toggle Play / Pause on Simulator
-function togglePlayback() {
-  const playBtn = document.getElementById("playSimBtn");
-  if (isPlaying) {
-    clearInterval(timerInterval);
-    isPlaying = false;
-    if (playBtn) playBtn.innerHTML = "▶ Putar Simulasi Timeline";
-  } else {
-    if (currentSecond >= TOTAL_DURATION_SEC) currentSecond = 0;
-    isPlaying = true;
-    if (playBtn) playBtn.innerHTML = "⏸ Jeda Simulasi";
-    timerInterval = setInterval(() => {
-      currentSecond += 0.25 * playbackSpeed;
-      if (currentSecond >= TOTAL_DURATION_SEC) {
-        currentSecond = TOTAL_DURATION_SEC;
-        updateSimulatorUI(currentSecond);
-        togglePlayback();
-        return;
-      }
-      updateSimulatorUI(currentSecond);
-    }, 250);
-  }
-}
-
-// Jump to a specific shot or second
-function jumpToSecond(sec, scrollToSimulator = false) {
-  currentSecond = sec;
-  updateSimulatorUI(currentSecond);
-  if (scrollToSimulator) {
-    document.getElementById("simulator")?.scrollIntoView({ behavior: "smooth", block: "center" });
-  }
-}
 
 // Toggle shot completion status in localStorage
 function toggleShotCompleted(shotId) {
@@ -660,12 +553,9 @@ function renderShotsList() {
     return;
   }
 
-  const activeShot = getShotAtSecond(currentSecond);
-
   container.innerHTML = filtered
     .map((shot) => {
       const isDone = completedShots.includes(shot.id);
-      const isPlayingNow = activeShot && activeShot.id === shot.id;
 
       const sceneBadgeColors = {
         1: "background: rgba(16,185,129,0.15); color: #34d399;",
@@ -682,7 +572,7 @@ function renderShotsList() {
       const hasDialogue = shot.dialogue && shot.dialogue.trim() !== "Tidak ada dialog lisan." && !shot.dialogue.startsWith("Tidak ada dialog");
 
       return `
-        <article class="shot-card ${isPlayingNow ? "playing-now" : ""} ${isDone ? "shot-done" : ""}" data-shot-id="${shot.id}">
+        <article class="shot-card ${isDone ? "shot-done" : ""}" data-shot-id="${shot.id}">
           <!-- Kolom 1: Detik, Kamera & Lokasi Syuting -->
           <div class="shot-time-col">
             <div class="shot-num-row">
@@ -692,9 +582,6 @@ function renderShotsList() {
             <div class="shot-timestamp">${shot.timeLabel}</div>
             <div class="shot-camera-type">🎥 ${shot.camera}</div>
             <div class="shot-location-badge">📍 ${shot.location}</div>
-            <button type="button" class="btn shot-play-btn" onclick="jumpToSecond(${shot.startSec}, true)">
-              ▶ Monitor (${formatTime(shot.startSec)})
-            </button>
             <label class="shot-check-label">
               <input type="checkbox" ${isDone ? "checked" : ""} onchange="toggleShotCompleted(${shot.id})" />
               <span>Sudah Take / Selesai</span>
@@ -761,37 +648,7 @@ function renderShotsList() {
 // Initialize Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
   renderShotsList();
-  updateSimulatorUI(0);
   updateProgressCounter();
-
-  const playBtn = document.getElementById("playSimBtn");
-  if (playBtn) playBtn.addEventListener("click", togglePlayback);
-
-  const resetBtn = document.getElementById("resetSimBtn");
-  if (resetBtn) {
-    resetBtn.addEventListener("click", () => {
-      if (isPlaying) togglePlayback();
-      jumpToSecond(0);
-    });
-  }
-
-  const speedBtn = document.getElementById("speedSimBtn");
-  if (speedBtn) {
-    speedBtn.addEventListener("click", () => {
-      const speeds = [1, 2, 4];
-      const nextIdx = (speeds.indexOf(playbackSpeed) + 1) % speeds.length;
-      playbackSpeed = speeds[nextIdx];
-      speedBtn.textContent = `⚡ Kecepatan: ${playbackSpeed}x`;
-    });
-  }
-
-  const slider = document.getElementById("timelineSlider");
-  if (slider) {
-    slider.addEventListener("input", (e) => {
-      currentSecond = Number(e.target.value);
-      updateSimulatorUI(currentSecond);
-    });
-  }
 
   // Filter Tabs
   document.querySelectorAll(".filter-tab").forEach((tab) => {

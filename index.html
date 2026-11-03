@@ -21,8 +21,7 @@
       </a>
       <nav class="nav-links">
         <a href="#storyline" class="nav-link">Alur Cerita</a>
-        <a href="#simulator" class="nav-link">Monitor Timeline</a>
-        <a href="#shotlist" class="nav-link">Shot List (Detik)</a>
+        <a href="#shotlist" class="nav-link">Shot List (20 Shot)</a>
         <a href="#vo-script" class="nav-link">Naskah VO</a>
         <a href="#prep" class="nav-link">Checklist Produksi</a>
         <button type="button" class="btn btn-gold" id="openTeleprompterBtn">
@@ -119,8 +118,6 @@
             </p>
           </div>
           <div class="act-specs">
-            <span><strong>🎨 Visual:</strong> High-key, ceria, hangat, golden hour Seoul.</span>
-            <span><strong>🎵 Audio:</strong> Pengumuman bandara Korea + Musik Pop ceria.</span>
             <span><strong>🎙️ VO:</strong> Tanpa VO (visual storytelling murni).</span>
           </div>
         </div>
@@ -138,8 +135,6 @@
             </p>
           </div>
           <div class="act-specs">
-            <span><strong>🎨 Visual:</strong> Cold fluorescent kelas, low-key kamar malam (4200K).</span>
-            <span><strong>🎵 Audio:</strong> Alarm, ketikan keyboard, dentang piring, nada video call terputus.</span>
             <span><strong>🎙️ VO:</strong> Tanpa VO (beban hidup tersampaikan lewat aksi).</span>
           </div>
         </div>
@@ -157,8 +152,6 @@
             </p>
           </div>
           <div class="act-specs">
-            <span><strong>🎨 Visual:</strong> Long padding hitam, uap napas dingin, lampu meja temaram.</span>
-            <span><strong>🎵 Audio:</strong> Deru angin malam dingin + Dentingan piano minor sendu.</span>
             <span><strong>🎙️ VO:</strong> "Tuhan... sebenarnya Engkau tempatkan aku di sini buat apa?"</span>
           </div>
         </div>
@@ -176,9 +169,7 @@
             </p>
           </div>
           <div class="act-specs">
-            <span><strong>🎨 Visual:</strong> Ornamen Natal, pita emas, suasana gotong royong hangat.</span>
-            <span><strong>🎵 Audio:</strong> SFX Katalk! + Musik Strings & Piano hangat mulai masuk.</span>
-            <span><strong>🎙️ VO:</strong> Tanpa VO (rekonsiliasi lewat tindakan nyata).</span>
+            <span><strong>🎙️ VO:</strong> Tanpa VO (rekonsiliasi lewat dialog & tindakan nyata).</span>
           </div>
         </div>
 
@@ -195,8 +186,6 @@
             </p>
           </div>
           <div class="act-specs">
-            <span><strong>🎨 Visual:</strong> Lilin Natal, reka visual Maria-Yusuf & palungan, bokeh hangat.</span>
-            <span><strong>🎵 Audio:</strong> Narasi Lukas 2:1-7 + Orkestra sakral Crescendo menyentuh.</span>
             <span><strong>🎙️ VO:</strong> "Sang Juru Selamat datang bukan dalam kemegahan... tapi begitu sederhana."</span>
           </div>
         </div>
@@ -214,8 +203,6 @@
             </p>
           </div>
           <div class="act-specs">
-            <span><strong>🎨 Visual:</strong> Morning sunlight segar (5000K), langkah mantap di trotoar.</span>
-            <span><strong>🎵 Audio:</strong> Melodi akustik optimis + Langkah kaki mantap.</span>
             <span><strong>🎙️ VO:</strong> "Aku percaya, Tuhan tetap menyertai setiap langkahku."</span>
           </div>
         </div>
@@ -233,8 +220,6 @@
             </p>
           </div>
           <div class="act-specs">
-            <span><strong>🎨 Visual:</strong> Dokumenter multi-angle footage nyata jemaat -> Teks emas di atas latar hitam pekat.</span>
-            <span><strong>🎵 Audio:</strong> Musik orkestra klimaks megah penuh rasa syukur -> Reverb tail piano yang syahdu hingga hening di 04:40.</span>
             <span><strong>🎙️ VO:</strong> "Di mana pun Tuhan menempatkan kita saat ini, mari jalani apa yang Dia percayakan dengan setia..."</span>
           </div>
         </div>
@@ -242,81 +227,12 @@
     </div>
   </section>
 
-  <!-- Section 2: Interactive Director's Monitor & Timeline Simulator -->
-  <section class="section" id="simulator">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <div class="section-tag">02 / INTERACTIVE DIRECTOR'S MONITOR</div>
-          <h2 class="section-title">Simulasi Timeline Detik-ke-Detik (00:00 – 04:40)</h2>
-          <p class="section-desc">
-            Tekan tombol <strong>Putar Simulasi Timeline</strong> atau klik marker scene di bawah slider untuk melompat langsung ke adegan yang diinginkan.
-          </p>
-        </div>
-      </div>
-
-      <div class="simulator-wrapper">
-        <!-- Widescreen Cinema Monitor -->
-        <div class="cinema-screen" id="cinemaScreen">
-          <div class="hud-top">
-            <span class="hud-rec"><span class="rec-dot"></span> REC • 24 FPS • CINEMATIC 2.39:1</span>
-            <span class="hud-pill" id="hudShotCode">SHOT 01 (00:00 – 00:08)</span>
-            <span class="hud-pill" id="hudActName">Scene 1 — A New Beginning</span>
-          </div>
-
-          <div class="cinema-stage-center">
-            <div class="stage-visual-icon" id="stageIcon">✈️🇰🇷</div>
-            <div class="stage-shot-title" id="stageTitle">SHOT 01: Kedatangan di Bandara Incheon & Foto Kabar Keluarga</div>
-            <div class="stage-action-desc" id="stageAction">
-              Layar hitam sejenak dengan pengumuman bandara. Helen berjalan keluar gate kedatangan Bandara Incheon menarik koper dengan senyum antusias, lalu berfoto mengirim kabar ke grup keluarga.
-            </div>
-            <div class="stage-vo-caption" id="stageVo">
-              🎙️ [Tanpa VO — Suara pengumuman bandara & visual antusiasme Helen membangun eksposisi awal]
-            </div>
-          </div>
-
-          <div class="hud-bottom">
-            <span class="hud-pill" id="hudCamera">🎥 MS -> CU HP • 35mm f/2.0 Tracking</span>
-            <span class="hud-pill" id="hudLocation" style="color: #6ee7b7; border-color: rgba(52, 211, 153, 0.35);">📍 Bandara Incheon</span>
-            <span class="hud-pill" id="hudSfx">🔊 Pengumuman Bandara Korea + Pop Ceria</span>
-          </div>
-        </div>
-
-        <!-- Timeline Scrubber & Controls -->
-        <div class="sim-controls">
-          <div class="timeline-bar-wrap">
-            <div class="timeline-act-markers">
-              <div class="act-marker act-m1" onclick="jumpToSecond(0)" title="Scene 1: Kedatangan (00:00–00:20)">Sc.1 (00:00)</div>
-              <div class="act-marker act-m2" onclick="jumpToSecond(20)" title="Scene 2: Realita Keras (00:20–01:15)">Sc.2: Realita (00:20)</div>
-              <div class="act-marker act-m3" onclick="jumpToSecond(75)" title="Scene 3: Pertanyaan (01:15–01:45)">Sc.3: Tanya (01:15)</div>
-              <div class="act-marker act-m4" onclick="jumpToSecond(105)" title="Scene 4: Persiapan Natal (01:45–02:15)">Sc.4: Persiapan (01:45)</div>
-              <div class="act-marker act-m5" onclick="jumpToSecond(135)" title="Scene 5: Ibadah & Palungan (02:15–03:20)">Sc.5: Palungan (02:15)</div>
-              <div class="act-marker act-m6" onclick="jumpToSecond(200)" title="Scene 6: Hati yang Baru (03:20–03:40)">Sc.6: Hati Baru (03:20)</div>
-              <div class="act-marker act-m7" onclick="jumpToSecond(220)" title="Scene 7: Montase Jemaat (03:40–04:30)">Sc.7: Jemaat (03:40)</div>
-              <div class="act-marker act-m8" onclick="jumpToSecond(270)" title="Closing Title Card (04:30–04:40)">End (04:30)</div>
-            </div>
-            <input type="range" min="0" max="280" value="0" step="1" class="timeline-slider" id="timelineSlider" aria-label="Slider Detik Video" />
-          </div>
-
-          <div class="sim-buttons-row">
-            <div class="sim-btn-group">
-              <button type="button" class="btn btn-gold" id="playSimBtn">▶ Putar Simulasi Timeline</button>
-              <button type="button" class="btn" id="resetSimBtn">⏮ Ulang dari 00:00</button>
-              <button type="button" class="btn" id="speedSimBtn">⚡ Kecepatan: 1x</button>
-            </div>
-            <div class="timecode-display" id="timecodeDisplay">00:00 / 04:40</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 3: Master Shot List & Second-by-Second Breakdown -->
+  <!-- Section 2: Master Shot List & Second-by-Second Breakdown -->
   <section class="section" id="shotlist">
     <div class="container">
       <div class="section-header">
         <div>
-          <div class="section-tag">03 / MASTER SHOT LIST & TIMECODE</div>
+          <div class="section-tag">02 / MASTER SHOT LIST & TIMECODE</div>
           <h2 class="section-title">Breakdown Detik Shoot, Kamera, Aksi, Dialog & Properti</h2>
           <p class="section-desc">
             Panduan lapangan komprehensif untuk Sutradara, Kameramen, Helen, Tim Lighting, Sound Recordist, dan Tim Properti di Korea. Centang kotak <strong>"Sudah Take"</strong> saat syuting berlangsung.
@@ -351,12 +267,12 @@
     </div>
   </section>
 
-  <!-- Section 4: Full Voice Over (VO) Script Studio -->
+  <!-- Section 3: Full Voice Over (VO) Script Studio -->
   <section class="section" id="vo-script">
     <div class="container">
       <div class="section-header">
         <div>
-          <div class="section-tag">04 / VOICE OVER RECORDING SCRIPT</div>
+          <div class="section-tag">03 / VOICE OVER RECORDING SCRIPT</div>
           <h2 class="section-title">Naskah Rekaman Voice Over (VO) & Panduan Rasa</h2>
           <p class="section-desc">
             Sesuai konsep <em>minimal VO & emotional reflection</em>, dialog dan VO hanya hadir pada titik-titik krusial yang sarat makna.
@@ -442,12 +358,12 @@
     </div>
   </section>
 
-  <!-- Section 5: Pre-Production Checklist -->
+  <!-- Section 4: Pre-Production Checklist -->
   <section class="section" id="prep">
     <div class="container">
       <div class="section-header">
         <div>
-          <div class="section-tag">05 / PRODUCTION PREPARATION</div>
+          <div class="section-tag">04 / PRODUCTION PREPARATION</div>
           <h2 class="section-title">Checklist Kebutuhan Syuting di Korea (Lokasi, Properti & Teknis)</h2>
           <p class="section-desc">
             Panduan persiapan logistik lengkap untuk pengambilan gambar di Korea Selatan sesuai naskah revisi.

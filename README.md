@@ -1,6 +1,6 @@
 # 🎬 The Unchosen Place — Christmas Short Film Production Deck
 
-Website dokumen produksi, *storyline*, *master shot list* detik-ke-detik (`00:00 – 03:00`), serta *teleprompter* naskah *Voice Over (VO)* untuk proyek video Natal **The Unchosen Place**.
+Website dokumen produksi, *storyline* 7 Scene, *master shot list* komprehensif (`00:00 – 04:40`), rincian lokasi syuting, checklist produksi, serta *teleprompter* naskah *Voice Over (VO)* untuk proyek video Natal **The Unchosen Place (Refleksi Lukas 2:1–7)**.
 
 ---
 
@@ -23,10 +23,11 @@ git rm --cached *.mp3
 
 ## 📂 Struktur File Website (Yang Di-upload ke GitHub)
 
-* `index.html` — Halaman utama *Director's Treatment*, monitor simulasi timeline, *shot list*, dan *teleprompter* VO.
+* `index.html` — Halaman utama *Director's Treatment*, *Storyline* 7 Scene, *Shot List* (Shot 01–20), *Teleprompter* VO, dan Checklist Produksi.
 * `styles.css` — Styling sinematik responsif (Desktop, Tablet, HP) & format cetak PDF.
-* `app.js` — Data 18 *shot* (`00:00 – 03:00`), logika simulator *timecode*, filter babak, dan *checklist* progres syuting.
-* `Video_natal_The_Unchosen_Place.MD` — Catatan draf ide awal cerita.
+* `app.js` — Data 20 *shot* (`00:00 – 04:40`), filter scene, pencarian teks/lokasi, dan *checklist* progres syuting.
+* `The Unchosen Place_script (1).pdf` — Naskah resmi *Revised Full Script*.
+* `Video_natal_The_Unchosen_Place.MD` — Naskah rujukan dan panduan produksi lengkap (*Production Bible*).
 * `.nojekyll` — Konfigurasi agar GitHub Pages langsung menayangkan file statis.
 * `.gitignore` — Mencegah file `*.mp3` ikut ter-upload ke GitHub.
 

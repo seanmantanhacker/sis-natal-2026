@@ -685,3 +685,57 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+// ==========================================
+// ON-SET SHOOTING SHEET (simple PDF, 1 click)
+// Only fields needed on location: scene, shot, location, action, props, dialogue.
+// ==========================================
+function exportShootingSheetPDF() {
+  const esc = (s) => String(s || "-").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const scenes = {};
+  SHOTS_DATA.forEach((s) => (scenes[s.sceneNum] = scenes[s.sceneNum] || { name: s.sceneName, shots: [] }).shots.push(s));
+
+  let body = "";
+  Object.keys(scenes).sort((a, b) => a - b).forEach((num) => {
+    const sc = scenes[num];
+    body += `<h2>${esc(sc.name)}</h2>`;
+    sc.shots.forEach((s) => {
+      body += `
+      <div class="shot">
+        <div class="head"><b>Scene ${num} · ${esc(s.code)}</b> — ${esc(s.title)} <span>${esc(s.timeLabel)} (${s.duration}s)</span><i>☐</i></div>
+        <table>
+          <tr><th>Location</th><td>${esc(s.location)}</td></tr>
+          <tr><th>Camera</th><td>${esc(s.camera)} · ${esc(s.lensAndMove)}</td></tr>
+          <tr><th>Action</th><td>${esc(s.action)}</td></tr>
+          <tr><th>Property</th><td>${esc(s.propsWardrobe)}</td></tr>
+          <tr><th>Dialogue</th><td>${esc(s.dialogue)}</td></tr>
+        </table>
+      </div>`;
+    });
+  });
+
+  const w = window.open("", "_blank");
+  if (!w) { alert("Popup diblokir. Izinkan popup untuk membuat PDF."); return; }
+  w.document.write(`<!DOCTYPE html><html><head><meta charset="utf-8">
+<title>The Unchosen Place - Shooting Sheet</title>
+<style>
+  @page { size: A4; margin: 12mm; }
+  body { font-family: Arial, sans-serif; font-size: 10.5pt; color: #000; margin: 0; }
+  h1 { font-size: 16pt; margin: 0 0 4px; }
+  h2 { font-size: 12.5pt; background: #000; color: #fff; padding: 4px 8px; margin: 14px 0 6px; break-after: avoid; }
+  .shot { border: 1px solid #000; margin-bottom: 8px; break-inside: avoid; }
+  .head { background: #eee; padding: 4px 8px; border-bottom: 1px solid #000; position: relative; }
+  .head span { color: #444; font-size: 9pt; margin-left: 6px; }
+  .head i { position: absolute; right: 8px; font-style: normal; font-size: 13pt; top: 1px; }
+  table { width: 100%; border-collapse: collapse; }
+  th { width: 80px; text-align: left; vertical-align: top; padding: 3px 8px; background: #fafafa; border-top: 1px solid #ccc; }
+  td { padding: 3px 8px; border-top: 1px solid #ccc; vertical-align: top; }
+</style></head><body>
+<h1>THE UNCHOSEN PLACE — Shooting Sheet</h1>
+<div>${SHOTS_DATA.length} shots · Printed ${new Date().toLocaleDateString()}</div>
+${body}
+<script>window.onload = () => { window.print(); };<\/script>
+</body></html>`);
+  w.document.close();
+}

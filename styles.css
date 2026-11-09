@@ -14,10 +14,14 @@
   --gold: #f59e0b;
   --gold-light: #fcd34d;
   --crimson: #e11d48;
-  --act1-color: #ec4899; /* Vibrant Social Media Neon Pink */
-  --act2-color: #38bdf8; /* Cold Desaturated Bedroom Blue */
-  --act3-color: #a855f7; /* Reflective Church Purple/Indigo */
-  --act4-color: #f59e0b; /* Warm Christmas Restoration Gold */
+  --act1-color: #ec4899;
+  /* Vibrant Social Media Neon Pink */
+  --act2-color: #38bdf8;
+  /* Cold Desaturated Bedroom Blue */
+  --act3-color: #a855f7;
+  /* Reflective Church Purple/Indigo */
+  --act4-color: #f59e0b;
+  /* Warm Christmas Restoration Gold */
   --emerald: #10b981;
 
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -338,10 +342,21 @@ body {
   height: 4px;
 }
 
-.act-card.act-1::before { background: var(--act1-color); }
-.act-card.act-2::before { background: var(--act2-color); }
-.act-card.act-3::before { background: var(--act3-color); }
-.act-card.act-4::before { background: var(--act4-color); }
+.act-card.act-1::before {
+  background: var(--act1-color);
+}
+
+.act-card.act-2::before {
+  background: var(--act2-color);
+}
+
+.act-card.act-3::before {
+  background: var(--act3-color);
+}
+
+.act-card.act-4::before {
+  background: var(--act4-color);
+}
 
 .act-header {
   display: flex;
@@ -359,10 +374,25 @@ body {
   text-transform: uppercase;
 }
 
-.act-1 .act-badge { background: rgba(236, 72, 153, 0.15); color: #f472b6; }
-.act-2 .act-badge { background: rgba(56, 189, 248, 0.15); color: #7dd3fc; }
-.act-3 .act-badge { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
-.act-4 .act-badge { background: rgba(245, 158, 11, 0.15); color: #fcd34d; }
+.act-1 .act-badge {
+  background: rgba(236, 72, 153, 0.15);
+  color: #f472b6;
+}
+
+.act-2 .act-badge {
+  background: rgba(56, 189, 248, 0.15);
+  color: #7dd3fc;
+}
+
+.act-3 .act-badge {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+}
+
+.act-4 .act-badge {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fcd34d;
+}
 
 .act-time {
   font-family: var(--font-mono);
@@ -831,20 +861,4 @@ body {
   color: var(--text-muted);
   font-size: 0.85rem;
 }
-
-@media print {
-  .navbar, .simulator-wrapper, .filter-bar, .shot-play-btn {
-    display: none !important;
-  }
-  body {
-    background: #ffffff;
-    color: #000000;
-  }
-  .shot-card, .act-card, .vo-script-card, .prep-card {
-    break-inside: avoid;
-    border: 1px solid #cccccc;
-    background: #ffffff;
-    color: #000000;
-  }
-}
-
+

@@ -17,12 +17,12 @@ const SHOTS_DATA = [
     duration: 8,
     timeLabel: "00:00 – 00:08",
     title: "Kedatangan di Bandara Incheon & Foto Kabar Keluarga",
-    location: "Bandara Internasional Incheon (Terminal 1 / 2 — Gate Kedatangan Internasional)",
+    location: "Di jalanan Area jangjeon",
     camera: "Medium Shot (MS) -> Close-Up (CU) HP",
     lensAndMove: "35mm f/2.0 • Gimbal Tracking Mundur mengikuti langkah Helen",
     visualIcon: "✈️🇰🇷",
     bgGradient: "linear-gradient(135deg, #064e3b 0%, #047857 50%, #0f172a 100%)",
-    action: "Layar hitam sejenak dengan pengumuman bandara. Helen berjalan keluar dari gate kedatangan Bandara Incheon menarik koper. Wajahnya berseri-seri penuh antusiasme. Ia berhenti, mengeluarkan HP, mengambil foto selfie dengan latar plang Incheon Airport, lalu mengirim pesan ke grup keluarga: 'Finally made it to Korea!! 🥹🇰🇷'.",
+    action: "Layar hitam sejenak dengan pengumuman bandara. Helen berjalan keluar ceritanya sudah di jalanan menarik koper. Wajahnya berseri-seri penuh antusiasme. Ia berhenti, mengeluarkan HP, mengambil foto selfie, lalu mengirim pesan ke grup keluarga: 'Finally made it to Korea!! 🥹🇰🇷'.",
     propsWardrobe: "Koper pakaian, ransel, paspor/boarding pass di saku, HP dengan wallpaper Indonesia, jaket kasual bandara.",
     lighting: "Clean High-Key Airport Daylight (5600K), pendar neon terang dan modern.",
     dialogue: "Airport PA System (Korea): '승객 여러분, 인천국제공항에 도착하였습니다.' (Para penumpang, kita telah tiba di Bandara Internasional Incheon).",
@@ -40,7 +40,7 @@ const SHOTS_DATA = [
     duration: 6,
     timeLabel: "00:08 – 00:14",
     title: "Montase Cepat Pengalaman Menyenangkan di Korea",
-    location: "Area Publik Seoul: Trotoar Hongdae, Kafe Estetik, & Gerai Street Food Myeongdong",
+    location: "Area Publik Busan: Trotoar, Kafe Estetik, & Gerai Street Food",
     camera: "Fast-Cut Montase (4 Klip @ 1.5 dtk) • Whip Pan & Match Cut",
     lensAndMove: "24mm & 50mm f/1.8 • Handheld Dinamis & Enerjik",
     visualIcon: "☕🍜✨",
@@ -119,7 +119,7 @@ const SHOTS_DATA = [
     visualIcon: "🛎️🏃‍♀️",
     bgGradient: "linear-gradient(135deg, #18181b 0%, #27272a 60%, #3f3f46 100%)",
     action: "Helen memakai celemek kerja part-time di restoran/kafe Korea, sibuk bolak-balik mengantar piring dan membersihkan meja pelanggan. Atasannya memanggil dengan nada tegas dan terburu-buru. Helen menunduk patuh, menjawab cepat, lalu berlari kecil menyelesaikan pesanan. Cut to: Helen berjalan keluar toko malam hari menenteng tas ransel dengan bahu merosot kelelahan.",
-    propsWardrobe: "Celemek kerja hitam, name tag bertuliskan '헬렌' (Helen), nampan pesanan, lap meja.",
+    propsWardrobe: "Celemek kerja, nampan pesanan, lap meja.",
     lighting: "Lampu dapur restoran terang benderang yang bising dan menekan.",
     dialogue: "Atasan (tegas): '헬렌 씨, 이것도 빨리 부탁해요!' (Helen, tolong yang ini juga cepat ya!)\nHelen (tergesa-gesa): '아, 네! 바로 하겠습니다!' (Ah, ya! Segera saya kerjakan!)",
     sfx: "Dentang piring/gelas restoran, bel pintu masuk 'cling', langkah tergesa-gesa.",
@@ -610,9 +610,8 @@ function renderShotsList() {
 
           <!-- Kolom 3: Dialog Karakter, Voice Over & Audio -->
           <div class="shot-audio-col">
-            ${
-              hasDialogue
-                ? `
+            ${hasDialogue
+          ? `
                 <div style="background: rgba(255,255,255,0.04); border-radius: 6px; padding: 0.55rem 0.75rem; border-left: 3px solid #38bdf8;">
                   <div style="font-family: var(--font-mono); font-size: 0.65rem; color: #7dd3fc; text-transform: uppercase; font-weight: 700; margin-bottom: 0.2rem;">
                     💬 Dialog di Set:
@@ -622,8 +621,8 @@ function renderShotsList() {
                   </div>
                 </div>
               `
-                : ""
-            }
+          : ""
+        }
 
             <div class="vo-box" style="${hasVO ? "border-left-color: var(--gold);" : "border-left-color: var(--text-muted); opacity: 0.85;"}">
               <div class="vo-label">${hasVO ? `🎙️ Voice Over (${shot.timeLabel})` : "🎙️ Voice Over"}</div>
@@ -694,7 +693,9 @@ document.addEventListener("DOMContentLoaded", () => {
 function exportShootingSheetPDF() {
   const esc = (s) => String(s || "-").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   const scenes = {};
-  SHOTS_DATA.forEach((s) => (scenes[s.sceneNum] = scenes[s.sceneNum] || { name: s.sceneName, shots: [] }).shots.push(s));
+  // Respect the active scene filter tab ("all" = every scene)
+  const list = SHOTS_DATA.filter((s) => activeSceneFilter === "all" || s.sceneNum === Number(activeSceneFilter));
+  list.forEach((s) => (scenes[s.sceneNum] = scenes[s.sceneNum] || { name: s.sceneName, shots: [] }).shots.push(s));
 
   let body = "";
   Object.keys(scenes).sort((a, b) => a - b).forEach((num) => {
@@ -733,7 +734,7 @@ function exportShootingSheetPDF() {
   td { padding: 3px 8px; border-top: 1px solid #ccc; vertical-align: top; }
 </style></head><body>
 <h1>THE UNCHOSEN PLACE — Shooting Sheet</h1>
-<div>${SHOTS_DATA.length} shots · Printed ${new Date().toLocaleDateString()}</div>
+<div>${activeSceneFilter === "all" ? "All scenes" : "Scene " + activeSceneFilter} · ${list.length} shots · Printed ${new Date().toLocaleDateString()}</div>
 ${body}
 <script>window.onload = () => { window.print(); };<\/script>
 </body></html>`);

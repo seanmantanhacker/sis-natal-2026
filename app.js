@@ -1,7 +1,7 @@
 // MASTER SHOT LIST & PRODUCTION DECK DATA
 // Based on: "THE UNCHOSEN PLACE — Cinematic Christmas Short Film (Revised Full Script)"
 // Theme: Placed with Purpose, Held by Grace • Reflection: Lukas 2:1-7
-// Total Runtime: 04:40 (280 Detik) • 7 Scenes + Closing • 20 Detailed Shots
+// Total Runtime: 04:40 (280 Detik) • 7 Scenes + Closing • 18 Detailed Shots
 
 const SHOTS_DATA = [
   // ==========================================
@@ -23,7 +23,7 @@ const SHOTS_DATA = [
     visualIcon: "✈️🇰🇷",
     bgGradient: "linear-gradient(135deg, #064e3b 0%, #047857 50%, #0f172a 100%)",
     action: "Layar hitam sejenak dengan pengumuman bandara. Helen berjalan keluar ceritanya sudah di jalanan menarik koper. Wajahnya berseri-seri penuh antusiasme. Ia berhenti, mengeluarkan HP, mengambil foto selfie, lalu mengirim pesan ke grup keluarga: 'Finally made it to Korea!! 🥹🇰🇷'.",
-    propsWardrobe: "Koper pakaian, ransel, paspor/boarding pass di saku, HP dengan wallpaper Indonesia, jaket kasual bandara.",
+    propsWardrobe: "Koper pakaian, ransel, HP, jaket kasual bandara.",
     lighting: "Clean High-Key Airport Daylight (5600K), pendar neon terang dan modern.",
     dialogue: "Airport PA System (Korea): '승객 여러분, 인천국제공항에 도착하였습니다.' (Para penumpang, kita telah tiba di Bandara Internasional Incheon).",
     sfx: "Ambience dengung bandara internasional, gesekan roda koper di lantai marmer, SFX notifikasi terkirim 'Whoosh'. Musik Pop ceria bersemangat mulai masuk pelan.",
@@ -86,9 +86,9 @@ const SHOTS_DATA = [
     sceneNum: 2,
     sceneName: "Scene 2 — When Reality Hits (Realita Keras Menghantam)",
     startSec: 20,
-    endSec: 29,
-    duration: 9,
-    timeLabel: "00:20 – 00:29",
+    endSec: 38,
+    duration: 18,
+    timeLabel: "00:20 – 00:38",
     title: "Montage Kuliah: Dinding Bahasa & Begadang Tugas 02:15",
     location: "Ruang Kelas Universitas Korea & Meja Belajar Kamar Helen (Tengah Malam)",
     camera: "Medium Shot Kelas -> Insert Jam Digital & CU Wajah Letih",
@@ -106,29 +106,6 @@ const SHOTS_DATA = [
   {
     id: 5,
     code: "SHOT 05",
-    sceneNum: 2,
-    sceneName: "Scene 2 — When Reality Hits (Realita Keras Menghantam)",
-    startSec: 29,
-    endSec: 38,
-    duration: 9,
-    timeLabel: "00:29 – 00:38",
-    title: "Montage Part-Time: Tekanan Kerja & '헬렌 씨, 빨리!'",
-    location: "Restoran / Kafe Korea Tempat Kerja Part-Time (Area Meja Tamu & Trotoar Luar Toko)",
-    camera: "Handheld Medium Shot di Tempat Kerja Part-Time",
-    lensAndMove: "35mm f/2.0 • Gerakan kamera cepat mengikuti ritme kerja",
-    visualIcon: "🛎️🏃‍♀️",
-    bgGradient: "linear-gradient(135deg, #18181b 0%, #27272a 60%, #3f3f46 100%)",
-    action: "Helen memakai celemek kerja part-time di restoran/kafe Korea, sibuk bolak-balik mengantar piring dan membersihkan meja pelanggan. Atasannya memanggil dengan nada tegas dan terburu-buru. Helen menunduk patuh, menjawab cepat, lalu berlari kecil menyelesaikan pesanan. Cut to: Helen berjalan keluar toko malam hari menenteng tas ransel dengan bahu merosot kelelahan.",
-    propsWardrobe: "Celemek kerja, nampan pesanan, lap meja.",
-    lighting: "Lampu dapur restoran terang benderang yang bising dan menekan.",
-    dialogue: "Atasan (tegas): '헬렌 씨, 이것도 빨리 부탁해요!' (Helen, tolong yang ini juga cepat ya!)\nHelen (tergesa-gesa): '아, 네! 바로 하겠습니다!' (Ah, ya! Segera saya kerjakan!)",
-    sfx: "Dentang piring/gelas restoran, bel pintu masuk 'cling', langkah tergesa-gesa.",
-    vo: "[Tanpa VO — Menunjukkan perjuangan fisik mencari nafkah di sela padatnya kuliah]",
-    voNote: "Kontras antara wajah tersenyum ke pelanggan dan ekspresi layu saat atasan membelakanginya."
-  },
-  {
-    id: 6,
-    code: "SHOT 06",
     sceneNum: 2,
     sceneName: "Scene 2 — When Reality Hits (Realita Keras Menghantam)",
     startSec: 38,
@@ -150,8 +127,8 @@ const SHOTS_DATA = [
     voNote: "Ekspresi realistis tentang perhitungan hidup yang menuntut pengorbanan."
   },
   {
-    id: 7,
-    code: "SHOT 07",
+    id: 6,
+    code: "SHOT 06",
     sceneNum: 2,
     sceneName: "Scene 2 — When Reality Hits (Realita Keras Menghantam)",
     startSec: 46,
@@ -173,8 +150,8 @@ const SHOTS_DATA = [
     voNote: "Kekecewaan yang tertahan tanpa tangisan dramatis, justru lebih menyayat hati."
   },
   {
-    id: 8,
-    code: "SHOT 08",
+    id: 7,
+    code: "SHOT 07",
     sceneNum: 2,
     sceneName: "Scene 2 — When Reality Hits (Realita Keras Menghantam)",
     startSec: 55,
@@ -196,24 +173,24 @@ const SHOTS_DATA = [
     voNote: "Rasa bersalah bercampur lelah karena merasa gagal memenuhi ekspektasi semua orang."
   },
   {
-    id: 9,
-    code: "SHOT 09",
+    id: 8,
+    code: "SHOT 08",
     sceneNum: 2,
     sceneName: "Scene 2 — When Reality Hits (Realita Keras Menghantam)",
     startSec: 67,
     endSec: 75,
     duration: 8,
     timeLabel: "01:07 – 01:15",
-    title: "Montage Kesepian: Video Call Keluarga & Senyum Topeng",
+    title: "Montage Kesepian: Video Call Teman Indonesia & Senyum Topeng",
     location: "Kamar One-Room Helen (Sudut Kasur / Kamar Redup)",
     camera: "Close-Up Wajah Helen menatap layar Video Call HP",
     lensAndMove: "50mm f/1.4 • Slow Push-In tipis ke tatapan mata",
     visualIcon: "📱🏡",
     bgGradient: "linear-gradient(135deg, #090b10 0%, #0c192c 60%, #020617 100%)",
-    action: "Helen sedang melakukan video call bersama keluarganya di Indonesia. Di layar kecil tampak wajah ibu/keluarga yang tersenyum hangat bertanya: 'Gimana di Korea? Baik-baik aja?'. Helen memaksakan senyum paling manisnya: 'Iya, baik kok!'. Panggilan berakhir (bunyi nada 'tut-tut-tut'). Senyum Helen langsung luntur total. Kamera mundur perlahan memperlihatkan Helen duduk sendirian di sudut kamar yang dingin dan sunyi.",
-    propsWardrobe: "HP dengan tampilan video call keluarga di Indonesia, jaket tebal di kasur kamar sempit.",
+    action: "Helen sedang melakukan video call bersama teman dekatnya dari Indonesia. Di layar kecil tampak wajah sang teman yang tersenyum ceria bertanya: 'Gimana di Korea? Baik-baik aja?'. Helen memaksakan senyum paling manisnya: 'Iya, baik kok!'. Panggilan berakhir (bunyi nada 'tut-tut-tut'). Senyum Helen langsung luntur total. Kamera mundur perlahan memperlihatkan Helen duduk sendirian di sudut kamar yang dingin dan sunyi.",
+    propsWardrobe: "HP dengan tampilan video call teman Indonesia, jaket tebal di kasur kamar sempit.",
     lighting: "Cahaya hangat dari layar panggilan video mendadak padam menjadi temaram biru gelap (4000K).",
-    dialogue: "Suara Ibu di HP: 'Gimana di Korea? Baik-baik aja, Nak?'\nHelen (tersenyum tegar): 'Iya, baik kok!'",
+    dialogue: "Suara Teman Indonesia di HP: 'Gimana di Korea, Len? Baik-baik aja?'\nHelen (tersenyum tegar): 'Iya, baik kok!'",
     sfx: "SFX nada panggilan video terputus 'hang-up', helaan napas berat dalam keheningan total. Musik instrumental cello/piano minor mulai mengalir berat.",
     vo: "[Tanpa VO — Rasa kesepian paling intim seorang anak rantau yang menelan kepedihannya sendiri]",
     voNote: "Titik balik emosional terendah sebelum masuk ke monolog pergumulan di Scene 3."
@@ -223,8 +200,8 @@ const SHOTS_DATA = [
   // SCENE 3 — THE QUESTION (01:15 – 01:45 | 30 dtk)
   // ==========================================
   {
-    id: 10,
-    code: "SHOT 10",
+    id: 9,
+    code: "SHOT 09",
     sceneNum: 3,
     sceneName: "Scene 3 — The Question (Pertanyaan Eksistensial)",
     startSec: 75,
@@ -246,8 +223,8 @@ const SHOTS_DATA = [
     voNote: "Helen tampak kedinginan lahir dan batin."
   },
   {
-    id: 11,
-    code: "SHOT 11",
+    id: 10,
+    code: "SHOT 10",
     sceneNum: 3,
     sceneName: "Scene 3 — The Question (Pertanyaan Eksistensial)",
     startSec: 85,
@@ -273,8 +250,8 @@ const SHOTS_DATA = [
   // SCENE 4 — THE CHRISTMAS PREPARATION (01:45 – 02:15 | 30 dtk)
   // ==========================================
   {
-    id: 12,
-    code: "SHOT 12",
+    id: 11,
+    code: "SHOT 11",
     sceneNum: 4,
     sceneName: "Scene 4 — The Christmas Preparation (Persiapan Natal)",
     startSec: 105,
@@ -296,8 +273,8 @@ const SHOTS_DATA = [
     voNote: "Langkah kaki Helen masih ragu namun ada kerinduan untuk hadir."
   },
   {
-    id: 13,
-    code: "SHOT 13",
+    id: 12,
+    code: "SHOT 12",
     sceneNum: 4,
     sceneName: "Scene 4 — The Christmas Preparation (Persiapan Natal)",
     startSec: 115,
@@ -323,8 +300,8 @@ const SHOTS_DATA = [
   // SCENE 5 — THE FIRST CHRISTMAS (02:15 – 03:20 | 65 dtk)
   // ==========================================
   {
-    id: 14,
-    code: "SHOT 14",
+    id: 13,
+    code: "SHOT 13",
     sceneNum: 5,
     sceneName: "Scene 5 — The First Christmas (Ibadah Natal & Makna Palungan)",
     startSec: 135,
@@ -346,58 +323,35 @@ const SHOTS_DATA = [
     voNote: "Helen mempraktikkan kasih yang dulu ia rindukan kepada orang lain."
   },
   {
-    id: 15,
-    code: "SHOT 15",
+    id: 14,
+    code: "SHOT 14",
     sceneNum: 5,
     sceneName: "Scene 5 — The First Christmas (Ibadah Natal & Makna Palungan)",
     startSec: 155,
-    endSec: 175,
-    duration: 20,
-    timeLabel: "02:35 – 02:55",
-    title: "Pembacaan Lukas 2:1–7 & Visualisasi Palungan Betlehem",
-    location: "Ruang Ibadah Gereja (Bangku Jemaat) & Set Palungan Betlehem (Studio / Reka Simbolis)",
-    camera: "CU Helen Mendengar Firman -> Cinematic Reenactment Maria & Yusuf -> CU Palungan",
-    lensAndMove: "50mm f/1.4 -> 24mm Cinematic Wide -> Macro Palungan",
-    visualIcon: "📖✨👶",
-    bgGradient: "linear-gradient(135deg, #1e1b4b 0%, #4c1d95 50%, #78350f 100%)",
-    action: "CUT TO: Ibadah Natal dimulai. Helen duduk di antara jemaat mendengarkan firman. Terdengar suara narator membacakan Lukas 2:1–7. VISUAL: Transisi sinematik ke suasana Betlehem malam hari — Maria dan Yusuf menempuh perjalanan jauh berdebu. Yusuf memegang tali keledai, Maria yang sedang mengandung tampak lelah menatap pintu-pintu penginapan yang tertutup. Tibalah di sebuah kandang sederhana. Maria membaringkan bayi Yesus yang berbalut kain lampin ke dalam sebuah palungan kayu kasar. Kamera mengunci fokus pada palungan yang diterangi seberkas cahaya lembut.",
-    propsWardrobe: "Busana Alkitabiah sederhana: jubah Yusuf, kerudung Maria, kain lampin putih, palungan kayu berisi jerami.",
-    lighting: "Sinematik Chiaroscuro kuno: cahaya obor hangat dan seberkas sinar lembut dari atas menyinari palungan di tengah kegelapan kandang.",
-    dialogue: "Suara Pembacaan Firman (Narasi Lukas 2:1–7): 'Pada waktu itu, Kaisar Agustus mengeluarkan perintah untuk mengadakan sensus... Yusuf pergi dari Nazaret menuju Betlehem bersama Maria yang sedang mengandung. Ketika mereka di sana, tibalah waktunya bagi Maria untuk melahirkan. Ia melahirkan Yesus, membungkus-Nya dengan kain lampin, dan membaringkan-Nya di dalam palungan, karena tidak ada tempat bagi mereka di penginapan.'",
-    sfx: "Musik orkestra Strings lembut dan sakral berpadu dengan suara angin malam padang gurun.",
-    vo: "[Narasi Firman Alkitab Lukas 2:1–7 yang dibacakan secara berwibawa dan penuh penghayatan]",
-    voNote: "Jantung teologis film: Tuhan memilih palungan hina, tempat yang tidak seorang pun pilih."
-  },
-  {
-    id: 16,
-    code: "SHOT 16",
-    sceneNum: 5,
-    sceneName: "Scene 5 — The First Christmas (Ibadah Natal & Makna Palungan)",
-    startSec: 175,
     endSec: 200,
-    duration: 25,
-    timeLabel: "02:55 – 03:20",
-    title: "VO Refleksi Helen, Flashback Pembentukan & Doa Penyerahan Diri",
-    location: "Ruang Ibadah Gereja (Bangku Jemaat di Tengah Ibadah & Pendar Lilin Natal)",
-    camera: "Macro Palungan -> CU Helen Menatap Khusyuk -> Fast Flashback -> MCU Helen Berdoa",
-    lensAndMove: "50mm f/1.4 • Slow Zoom In ke Mata Helen yang Berkaca-kaca Haru",
-    visualIcon: "🕯️🙏🥺",
-    bgGradient: "linear-gradient(135deg, #78350f 0%, #451a03 50%, #090b10 100%)",
-    action: "Visual kembali dari palungan ke wajah Helen yang duduk di bangku gereja. Matanya basah penuh perenungan. Saat VO Helen berbicara, muncul KILASAN CEPAT FLASHBACK: (1) Helen lelah setelah kerja part-time, (2) Helen membaca email penolakan kerja, (3) Miskomunikasi dengan teman gereja, (4) Helen duduk sendiri di kamar. BACK TO PRESENT: Helen menatap jemaat di sekelilingnya yang sedang khusyuk menyembah dan saling melayani. Helen tersenyum haru, menundukkan kepala, melipat tangan, dan berdoa dengan sungguh-sungguh.",
-    propsWardrobe: "Lilin Natal kecil di tangan jemaat, alkitab di pangkuan Helen.",
-    lighting: "Bokeh lilin-lilin Natal keemasan berkilau di latar belakang wajah Helen.",
-    dialogue: "Tidak ada dialog (hanya alunan pujian jemaat di latar belakang).",
-    sfx: "Musik Strings & Piano membubung naik (Crescendo emosional yang menyentuh hati jemaat).",
-    vo: "Sang Juru Selamat dunia datang bukan dalam kemegahan... tapi dalam keadaan yang begitu sederhana. [Jeda singkat] Dan justru di sanalah, rencana keselamatan Allah dinyatakan. [Insert Palungan] Aku jadi sadar... mungkin selama ini aku terlalu fokus sama keadaan yang nggak sesuai harapanku. [Flashback proses berat] Padahal, lewat semua proses itu, Tuhan juga bisa membentuk hatiku... untuk belajar lebih sabar, lebih mengasihi, dan lebih peduli sama orang lain.",
-    voNote: "Klimaks penyerahan diri Helen: suara bergetar haru namun penuh kedamaian dan kelegaan iman."
+    duration: 45,
+    timeLabel: "02:35 – 03:20",
+    title: "Helen Mendengar Khotbah Lukas 2:1–7, Refleksi & Doa Penyerahan Diri",
+    location: "Ruang Ibadah Gereja (Bangku Jemaat di Tengah Ibadah Natal & Pendar Lilin)",
+    camera: "Wide Pengkhotbah di Mimbar -> MCU/CU Helen Mendengar Khusyuk -> MCU Helen Berdoa",
+    lensAndMove: "50mm f/1.4 • Static / Slow Zoom In ke Mata Helen yang Berkaca-kaca",
+    visualIcon: "📖🕯️🙏",
+    bgGradient: "linear-gradient(135deg, #1e1b4b 0%, #4c1d95 50%, #78350f 100%)",
+    action: "Ibadah Natal dimulai. Pengkhotbah di mimbar membacakan dan menyampaikan firman Lukas 2:1–7. Kamera fokus pada Helen yang duduk di bangku jemaat, mendengarkan dengan sungguh-sungguh; sesekali cutaway ke pengkhotbah. Perlahan mata Helen basah penuh perenungan saat mendengar bahwa tidak ada tempat bagi mereka di penginapan. Helen menatap jemaat di sekelilingnya yang sedang khusyuk beribadah, tersenyum haru, menundukkan kepala, melipat tangan, dan berdoa dengan sungguh-sungguh.",
+    propsWardrobe: "Alkitab di pangkuan Helen, lilin Natal kecil di tangan jemaat, mimbar & Alkitab pengkhotbah, dekorasi Natal gereja.",
+    lighting: "Bokeh lilin-lilin Natal keemasan di latar belakang wajah Helen, cahaya hangat gereja (3200K).",
+    dialogue: "Pengkhotbah (membacakan Lukas 2:1–7): 'Pada waktu itu, Kaisar Agustus mengeluarkan perintah untuk mengadakan sensus... Yusuf pergi dari Nazaret menuju Betlehem bersama Maria yang sedang mengandung. Ketika mereka di sana, tibalah waktunya bagi Maria untuk melahirkan. Ia melahirkan Yesus, membungkus-Nya dengan kain lampin, dan membaringkan-Nya di dalam palungan, karena tidak ada tempat bagi mereka di penginapan.'",
+    sfx: "Room tone gereja, suara pengkhotbah, lalu alunan pujian jemaat. Musik Strings & Piano membubung naik (crescendo emosional).",
+    vo: "Sang Juru Selamat dunia datang bukan dalam kemegahan... tapi dalam keadaan yang begitu sederhana. [Jeda singkat] Dan justru di sanalah, rencana keselamatan Allah dinyatakan. Aku jadi sadar... mungkin selama ini aku terlalu fokus sama keadaan yang nggak sesuai harapanku. Padahal, lewat semua proses itu, Tuhan juga bisa membentuk hatiku... untuk belajar lebih sabar, lebih mengasihi, dan lebih peduli sama orang lain.",
+    voNote: "VO Helen masuk setelah pembacaan firman selesai. Klimaks penyerahan diri: suara bergetar haru namun penuh kedamaian."
   },
 
   // ==========================================
   // SCENE 6 — THE SAME PLACE, A DIFFERENT HEART (03:20 – 03:40 | 20 dtk)
   // ==========================================
   {
-    id: 17,
-    code: "SHOT 17",
+    id: 15,
+    code: "SHOT 15",
     sceneNum: 6,
     sceneName: "Scene 6 — The Same Place, A Different Heart (Tempat yang Sama, Hati Berbeda)",
     startSec: 200,
@@ -424,8 +378,8 @@ const SHOTS_DATA = [
   // SURPRISE ENDING — MONTAGE JEMAAT
   // ==========================================
   {
-    id: 18,
-    code: "SHOT 18",
+    id: 16,
+    code: "SHOT 16",
     sceneNum: 7,
     sceneName: "Scene 7 — This Is Our Place (Surprise Ending: Montase Jemaat)",
     startSec: 220,
@@ -447,8 +401,8 @@ const SHOTS_DATA = [
     voNote: "VO menyapa seluruh audiens di ruangan gereja. Setiap jemaat akan merasa video ini sedang menceritakan hidup mereka sendiri."
   },
   {
-    id: 19,
-    code: "SHOT 19",
+    id: 17,
+    code: "SHOT 17",
     sceneNum: 7,
     sceneName: "Scene 7 — This Is Our Place (Surprise Ending: Montase Jemaat)",
     startSec: 245,
@@ -474,8 +428,8 @@ const SHOTS_DATA = [
   // CLOSING — PLACED WITH PURPOSE, HELD BY GRACE (04:30 – 04:40 | 10 dtk)
   // ==========================================
   {
-    id: 20,
-    code: "SHOT 20",
+    id: 18,
+    code: "SHOT 18",
     sceneNum: 8,
     sceneName: "Closing — Placed with Purpose, Held by Grace (Epilog & Judul)",
     startSec: 270,
@@ -711,6 +665,7 @@ function exportShootingSheetPDF() {
           <tr><th>Action</th><td>${esc(s.action)}</td></tr>
           <tr><th>Property</th><td>${esc(s.propsWardrobe)}</td></tr>
           <tr><th>Dialogue</th><td>${esc(s.dialogue)}</td></tr>
+          <tr><th>Voice Over</th><td>${esc(s.vo)}</td></tr>
         </table>
       </div>`;
     });
